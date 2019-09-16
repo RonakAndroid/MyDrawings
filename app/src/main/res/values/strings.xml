@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Android Draw</string>
+    <string name="enter_file_name">Enter file name</string>
+    <string name="image_preview_hint">Your Image Preview</string>
+    <string name="alert_twise">Can\'t Upload same file Twise</string>
+    <string name="title_image_from_firebase">Firebase image Collections</string>
+</resources>

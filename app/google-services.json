@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "159465422113",
+    "firebase_url": "https://draweval.firebaseio.com",
+    "project_id": "draweval",
+    "storage_bucket": "draweval.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:159465422113:android:b513f5d84336c6d3a15260",
+        "android_client_info": {
+          "package_name": "com.divyanshu.androiddraw"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "159465422113-vcnacns0o4q7rndlhntkjeri06v047go.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.divyanshu.androiddraw",
+            "certificate_hash": "efa2f987f325d53c32192457fcff143596260fe9"
+          }
+        },
+        {
+          "client_id": "159465422113-d337pbd68kp0eo6ref9sr0g8uv67t8dv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApYdg33wJtQP2H3uDix29MGuohooqPTSY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "159465422113-d337pbd68kp0eo6ref9sr0g8uv67t8dv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
