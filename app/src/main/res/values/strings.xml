@@ -4,4 +4,15 @@
     <string name="image_preview_hint">Your Image Preview</string>
     <string name="alert_twise">Can\'t Upload same file Twise</string>
     <string name="title_image_from_firebase">Firebase image Collections</string>
+    <string name="check_Internet_hint">Please Check Your Internet Permission</string>
+    <string name="str_hello_msg">Hello, World!</string>
+    <string name="message">message</string>
+    <string name="bitmap">bitmap</string>
+    <string name="cannnelid">channel-01</string>
+    <string name="channel_name">Channel Name</string>
+    <string name="confirm_before_delete">Are You Sure want to Delete this Image?</string>
+    <string name="alert">Alert</string>
+    <string name="save_drawing">Save Drawing</string>
+    <string name="path_string">images/</string>
+    <string name="images">images</string>
 </resources>

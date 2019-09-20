@@ -1,13 +1,16 @@
 package com.divyanshu.draw.widget
 
 import android.content.Context
-import android.graphics.*
-import androidx.annotation.ColorInt
-import androidx.core.graphics.ColorUtils
+import android.graphics.Bitmap
+import android.graphics.Canvas
+import android.graphics.Color
+import android.graphics.Paint
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
-import java.util.LinkedHashMap
+import androidx.annotation.ColorInt
+import androidx.core.graphics.ColorUtils
+import java.util.*
 
 class DrawView(context: Context, attrs: AttributeSet) : View(context, attrs) {
     private var mPaths = LinkedHashMap<MyPath, PaintOptions>()
@@ -18,6 +21,8 @@ class DrawView(context: Context, attrs: AttributeSet) : View(context, attrs) {
     private var mPaint = Paint()
     private var mPath = MyPath()
     private var mPaintOptions = PaintOptions()
+    private var mBgBitmap: Bitmap? = null
+
 
     private var mCurX = 0f
     private var mCurY = 0f
@@ -81,7 +86,7 @@ class DrawView(context: Context, attrs: AttributeSet) : View(context, attrs) {
     }
 
     fun setAlpha(newAlpha: Int) {
-        val alpha = (newAlpha*255)/100
+        val alpha = (newAlpha * 255) / 100
         mPaintOptions.alpha = alpha
         setColor(mPaintOptions.color)
     }
@@ -110,6 +115,9 @@ class DrawView(context: Context, attrs: AttributeSet) : View(context, attrs) {
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
 
+        if (mBgBitmap != null) {
+            canvas.drawBitmap(mBgBitmap!!, 0.0f, 10.0f,  null)
+        }
         for ((key, value) in mPaths) {
             changePaint(value)
             canvas.drawPath(key, mPaint)
@@ -118,6 +126,7 @@ class DrawView(context: Context, attrs: AttributeSet) : View(context, attrs) {
         changePaint(mPaintOptions)
         canvas.drawPath(mPath, mPaint)
     }
+
 
     private fun changePaint(paintOptions: PaintOptions) {
         mPaint.color = if (paintOptions.isEraserOn) Color.WHITE else paintOptions.color
@@ -129,6 +138,16 @@ class DrawView(context: Context, attrs: AttributeSet) : View(context, attrs) {
         mPath.reset()
         mPaths.clear()
         invalidate()
+    }
+
+    fun setBgBitmap(bitmap: Bitmap?) {
+        if (bitmap != null) {
+            this.mBgBitmap = bitmap
+        } else {
+            this.mBgBitmap = null
+        }
+        invalidate()
+        requestLayout()
     }
 
     private fun actionDown(x: Float, y: Float) {

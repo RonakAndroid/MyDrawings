@@ -6,11 +6,11 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'com.google.gms.google-services'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
     defaultConfig {
         applicationId "com.divyanshu.androiddraw"
         minSdkVersion 21
-        targetSdkVersion 28
+        targetSdkVersion 29
         versionCode 3
         versionName "1.0.2"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -59,11 +59,14 @@ dependencies {
 
     //Firebase Storage
     implementation 'com.google.firebase:firebase-storage:19.0.1'
-    implementation 'com.google.firebase:firebase-firestore:21.1.0'
+    implementation 'com.google.firebase:firebase-firestore:21.1.1'
     implementation 'com.firebaseui:firebase-ui-database:2.1.1'
 
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
 
     //coil image loding
     implementation("io.coil-kt:coil:0.6.1")
+    //media picker
+    implementation 'com.github.Mindinventory:Lassi:0.1.1'
+
 }

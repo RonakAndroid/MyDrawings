@@ -7,7 +7,6 @@ import java.util.*
 
 class MyPath : Path(), Serializable {
     val actions = LinkedList<Action>()
-
     private fun readObject(inputStream: ObjectInputStream) {
         inputStream.defaultReadObject()
 

@@ -16,7 +16,7 @@ object Logger {
         }
     }
 
-    fun i(tag: String, message: String) {
+    fun i(tag: String, message  : String) {
         if (BuildConfig.DEBUG) {
             Log.i(tag, message)
         }
